@@ -69,8 +69,17 @@ class FichierController extends Controller
     {
         return view('pages.editfichier',compact('fichier'));
     }
-
-    /**
+    // public function stoore(request $request)  {
+    //     $fichier= new Fichier ;
+    //     $fichier->titre=$request->titre;
+    //     $fichier->description=$request->description;
+    //     $fichier->metier=$request->metier;
+    //     $fichier->id_student=Auth::user()->id;
+    //     $pdfs=$request->pdf->store('pdfs','public');
+    //     $fichier->pdf=$pdfs;
+    //     $fichier->save
+    //     } 
+         /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Fichier $fichier)

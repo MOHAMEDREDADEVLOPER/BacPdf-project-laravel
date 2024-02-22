@@ -221,7 +221,7 @@
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger m-2"><i class="fa fa-trash"></i> Supprimer</button>
                                         </form>
-                                    @endif --}}
+                                    @endif hhh--}}
                                     {{-- <button class="btn btn-sm btn-success m-2"><i class="fa fa-info-circle"></i> Detail</button> --}}
                                 </div>
                                 

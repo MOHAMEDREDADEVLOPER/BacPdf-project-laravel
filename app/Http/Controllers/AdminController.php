@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Fichier;
 use GeoIp2\Database\Reader;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -61,6 +62,13 @@ class AdminController extends Controller
 
             return redirect()->back()->with('message', 'No Excel file uploaded. Please choose a file to upload.');
         }
+    }
+    public function destroy(Fichier $fichier)
+    {
+        // $id=Auth()->user()->id;
+        $fichier->delete();
+        return redirect()->route('student.index')->with('message','Fichier ete supprimer');
+
     }
     
     

@@ -22,6 +22,12 @@ class StudentController extends Controller
      */
     public function index(Request $request)
     {
+
+       
+
+        // // Calculate the overall average
+       
+
         $query = $request->input('query');
         $fichier = Fichier::latest()->paginate(10);
         if ($query) {
@@ -29,7 +35,7 @@ class StudentController extends Controller
                                 ->orWhere('description', 'LIKE', "%$query%")
                                 ->paginate(10);
         }
-        return view('pages.index', compact('fichier'));
+        return view('pages.index', compact('fichier'));//,'mention','overallAverage'
     }
     
 

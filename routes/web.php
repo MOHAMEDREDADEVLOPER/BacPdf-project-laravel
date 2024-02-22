@@ -6,6 +6,7 @@ use App\Http\Controllers\FichierController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SearchController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +17,7 @@ use App\Http\Controllers\SearchController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// Route::get('/search', [SearchController::class,'search'])->name('search');
+// Route::post('/calculemoyenne', [SearchController::class,'index'])->name('indexx');
 
 
 // Route::get('/',[AdminController::class,'ip']);
@@ -65,5 +66,7 @@ Route::get('/logout', [StudentController::class,'logout'])->name('logout')->miss
 //admin
 Route::get('/admin', [AdminController::class,'index'])->name('indexadmin')->missing(function(){
     return view('pages.ereur');
-});;
+});
+Route::delete('/delete/{fichier}', [AdminController::class,'destroy'])->name('deleteadmin');
+//destroy
 

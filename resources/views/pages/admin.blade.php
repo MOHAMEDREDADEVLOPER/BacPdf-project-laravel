@@ -23,8 +23,13 @@
          </div>
         </div>
      @endif
+
      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button
+         class="btn btn-primary dropdown-toggle"
+          type="button" data-bs-toggle="dropdown" 
+          aria-expanded="false"
+          >
             Add New Student
         </button>
         <ul class="dropdown-menu dropdown-menu-dark">
